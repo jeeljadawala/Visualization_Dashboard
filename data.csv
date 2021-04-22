@@ -1,13 +1,13 @@
-categoryName,count_category,countryName,count_country_i,count_country_e
-Fertilizers,72,Afghanistan,3,15
-Metals,50,Australia,17,19
-Fabric Materials,90,Bangladesh,5,20
-Plastic Products,85,Hong Kong,35,20
-Accumulators and Batteries,80,Brazil,10,18
-Chemicals,75,Canada,20,20
-Cosmetics,45,USA,100,45
-Dyes,65,UAE,60,35
-Electronic Components,60,UK,25,25
+categoryName,count_category,countryName,count_country_i,count_country_e, year,value_e,value_i
+Fertilizers,72,Afghanistan,3,15,2012,26484508030.90121,472227347161.0057 
+Metals,50,Australia,17,19,2013,82758196753.36017,170905402766.789
+Fabric Materials,90,Bangladesh,5,20,2014,192303611837.99304,214336830442.41904
+Plastic Products,85,Hong Kong,35,20,2015,136888449640.56866,242237637295.82764
+Accumulators and Batteries,80,Brazil,10,18,2016,123360431880.40244,1019012514065.8265
+Chemicals,75,Canada,20,20,2017,146113856352.38358,1533719020582.0525
+Cosmetics,45,USA,100,45,2018,48865934567.61577,379538308719.46844
+Dyes,65,UAE,60,35,2019,409067153130.89746,149358850385.92258
+Electronic Components,60,UK,25,25,2020,117456612839.38017,127139969559.35588
 Handicrafts,55,China,40,100
 Leather Products,50,Saudi Arab,27,40
 Machinery and Parts,45,Iran,28,30
