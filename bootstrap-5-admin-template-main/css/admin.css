@@ -37,3 +37,26 @@ body {
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
+
+.container {
+  float: left;
+}
+
+.container2 {
+  float: right;
+}
+
+.bubbles {
+  stroke-width: 2px;
+  stroke: white;
+}
+.bubbles:hover {
+  stroke: black;
+}
+.stackArea {
+  stroke-width: 2px;
+  stroke: white;
+}
+.stackArea:hover {
+  stroke: black;
+}
