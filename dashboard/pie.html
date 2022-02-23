@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+    <style>
+        .arc text {
+            font: 10px sans-serif;
+            text-anchor: middle;
+        }
+
+        .arc path {
+            stroke: #fff;
+        }
+
+        .title {
+            fill: black;
+            font-weight: bold;
+            size:30;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!--libraries for bootstrap-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<br>
+<h2>Country Contribution in India Trade</h2>
+
+    <svg width="500" height="375"></svg>
+	<br>
+  <br>
+  <br>
+  <a href="./waterfall.html" class="btn btn-primary" style="margin-left: 80px; margin.top:350px;" role="button">Next</a>
+  <a href="./admin.html" class="btn btn-primary" style="margin-left: 120px; margin.top:350px;" role="button">Home</a>
+
+
+    <script>
+
+		var chart6 = d3.select("svg"),
+            width = chart6.attr("width"),
+            height = chart6.attr("height"),
+		
+            radius = Math.min(width, height) / 2;
+        
+		
+		
+        var g = chart6.append("g")
+                   .attr("transform", "translate(" + 200 + "," + 200 + ")");
+
+        var color = d3.scaleOrdinal(['#DAF7A6 ','#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c','#a65628','#f781bf','#999999','#FF5733','#C70039','#FFC300','#900C3F','#581845']);
+
+        var pie = d3.pie().sort(null).value(function(d) { 
+                return d.count_country_i; 
+            });
+
+        var path = d3.arc()
+                     .outerRadius(radius - 10)
+                     .innerRadius(0);
+
+        var label = d3.arc()
+                      .outerRadius(radius)
+                      .innerRadius(radius - 80);
+
+        d3.csv("data.csv", function(data) {
+     
+	data.forEach(function(d){
+	d.countryName = d.countryName;
+	d.count_country_e = +d.count_country_i;
+//the + sign converts string automagically to number
+}); 
+
+            var arc = g.selectAll(".arc")
+                       .data(pie(data))
+                       .enter().append("g")
+                       .attr("class", "arc");
+
+            arc.append("path")
+               .attr("d", path)
+               .attr("fill", function(d) { return color(d.data.countryName); });
+        
+            arc.append("text")
+               .attr("transform", function(d) { 
+                        return "translate(" + label.centroid(d) + ")"; 
+                })
+               .text(function(d) { return d.data.countryName; });
+            });
+
+            /*chart6.append("g")
+               .attr("transform", "translate(" + (width / 2 - 120) + "," + 20 + ")")
+               .append("text")
+               .text("Country Contribution")
+               .attr("class", "title")
+			   
+			   
+			   var legendG = svg.selectAll(".legend")
+      .data(pie(data1))
+      .enter().append("g")
+      .attr("transform", function(d,i){
+        return "translate(" + (width - 110) + "," + (i * 15 + 20) + ")";
+      })
+      .attr("class", "legend");   
+    
+    legendG.append("rect")
+      .attr("width", 10)
+      .attr("height", 10)
+      .attr("fill", function(d, i) {
+        return colour(i);
+      });
+    
+    legendG.append("text")
+      .text(function(d){
+        return d.value + "  " + d.data.country_name;
+      })
+      .style("font-size", 12)
+      .attr("y", 10)
+      .attr("x", 11);*/
+			   
+			   
+    </script>
+</body>
+</html>

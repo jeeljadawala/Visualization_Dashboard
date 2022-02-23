@@ -1,4 +1,4 @@
-,pc_code,pc_description,unit,country_name,quantity,Per unit,categoryName,categoryID,Value,year
+,pc_code,pc_description,unit,country_name,quantity,perUnit,categoryName,categoryID,Value,year
 0,H9,Agro Chemicals,Kgs,Afghanistan,239068,0.716538,Fertilizers,3,171301.3066,2012
 1,L5,"Aluminium, Products Of Aluminm",Ton,Afghanistan,1462,9.443439,Metals,2,13806.30782,2013
 7,P8,"Cotton Fabrics, Madeups Etc.",Na,Afghanistan,1907,2.075031,Fabric Materials,14,3957.084117,2013
@@ -149,9 +149,9 @@
 130,Q3,"Manmade Yarn,Fabrics,Madeups",Na,Bangladesh,4557,320.279555,Fabric Materials,14,1459513.932,2020
 141,A5,Plastic Glass,Ton,Bangladesh,37270,9.030318,Plastic Products,8,336559.9519,2020
 145,O6,"Railwy Trnsprt Equipmnts, Prts",Na,Bangladesh,4261,42.999289,Machinery and parts,10,183219.9704,2020
-160,N2,Bicycle And Parts,Na,Bhutan,17541,0.003329,Machinery and Parts,10,58.393989,2012
-161,H5,"Bulk Drugs, Drug Intermediates",Kgs,Bhutan,899737,0.754824,Chemicals,7,679143.0813,2012
-165,L6,Copper And Prdcts Made Of Copr,Ton,Bhutan,110,0.456378,Metals,2,50.20158,2012
+160,N2,Bicycle And Parts,Na,Bhutan,17541,0.003329,Machinery and Parts,10,5844.393989,2012
+161,H5,"Bulk Drugs, Drug Intermediates",Kgs,Bhutan,899737,0.754824,Chemicals,7,65579143.0813,2012
+165,L6,Copper And Prdcts Made Of Copr,Ton,Bhutan,110,0.456378,Metals,2,5066.20158,2012
 178,J1,Footwear Of Rubber/Canvas Etc.,Na,Bhutan,8739,0.000512,Rubber Products,5,4.474368,2012
 166,I5,Cosmetics And Toiletries,Na,Bhutan,1274,4.403942,Cosmetics,6,5610.622108,2013
 167,P8,"Cotton Fabrics, Madeups Etc.",Na,Bhutan,8443,0.001132,Fabric Materials,14,9.557476,2013
@@ -337,96 +337,6 @@
 335,G1,Leather Garments,Kgs,China,1313475,79.629614,Leather Products,1,104591507.2,2020
 341,M2,Oth Non Ferous Metal And Prodc,Kgs,China,986337,4.077065,Metals,2,4021360.061,2020
 342,I4,Other Miscellaenious Chemicals,Kgs,China,1609816,29.497706,Chemicals,7,47485879.08,2020
-361,O9,"Computer Hardware, Peripherals",Na,China ,5861,16.121029,Machinery and Parts,10,94485.35097,2012
-364,I5,Cosmetics And Toiletries,Na,China ,3946,23.161243,Cosmetics,6,91394.26488,2012
-367,P7,Cotton Yarn,Ton,China ,454892,1049.954448,Fabric Materials,14,477615878.8,2012
-374,P2,Microwave ,Na,China ,8906,103.190753,Electronic Components,11,919016.8462,2012
-392,F9,Leather Goods,Na,China ,670127,12.963142,Leather Products,1,8686951.459,2012
-400,M2,Oth Non Ferous Metal And Prodc,Kgs,China ,408196,3.642549,Metals,2,1486873.932,2012
-413,S3,Silk Carpet,Sqm,China ,3,0.001263,Fabric Materials,14,0.003789,2012
-467,H5,"Bulk Drugs, Drug Intermediates",Kgs,China ,5900893,96.323745,Chemicals,7,568396112.6,2012
-475,N3,"Cranes, Lifts And Winches",Na,China ,45849,1.453569,Machinery and parts,10,66644.68508,2012
-478,H7,Dyes,Kgs,China ,6965036,28.323088,Dyes,7,197271327.6,2012
-360,S2,Carpet(Excl. Silk) Handmade,Sqm,China ,664087,12.920898,Handicrafts,12,8580600.39,2013
-362,P1,Consumer Electronics,Na,China ,4329,18.190901,Electronic Components,11,78748.41043,2013
-363,L6,Copper And Prdcts Made Of Copr,Ton,China ,139470,707.983631,Metals,2,98742477.02,2013
-387,L3,Iron And Steel,Ton,China ,584448,367.2339,Metals,2,214629118.4,2013
-388,E8,Iron Ore,Ton,China ,29185877,1440.700465,Metals,2,42048106565,2013
-398,L8,"Nickel, Product Made Of Nickel",Ton,China ,3434,37.448566,Metals,2,128598.3756,2013
-404,K7,Packaging Materials,Ton,China ,1133,4.9534,Plastic Products,8,5612.2022,2013
-458,N1,"Aircraft, Spacecraft And Parts",Na,China ,1577,24.401445,Machinery and Parts,10,38481.07877,2013
-466,N2,Bicycle And Parts,Na,China ,919844,4.633497,Machinery and Parts,10,4262094.414,2013
-469,O9,"Computer Hardware, Peripherals",Na,China ,25723,0.124879,Machinery and Parts,10,3212.262517,2013
-477,H6,Dye Intermediates,Kgs,China ,3590,0.007921,Dyes,7,28.43639,2013
-485,H3,Fertilizers Manufactured,Ton,China ,114,0.374084,Fertilizers,3,42.645576,2013
-356,I8,Auto Tyres And Tubes,Nos,China ,8317,1.090752,Rubber Products,5,9071.784384,2014
-357,H4,Ayush And Herbal Products,Kgs,China ,2575598,5.90814,Cosmetics,6,15216993.57,2014
-397,E5,Natural Rubber,Ton,China ,5311,7.388341,Rubber Products,5,39239.47905,2014
-399,I3,Organic Chemicals,Kgs,China ,331521335,455.053364,Chemicals,7,1.51E+11,2014
-408,L4,Products Of Iron And Steel,Na,China ,2935,69.240987,Metals,2,203222.2968,2014
-412,Q9,Rmg Wool,Na,China ,142,5.066196,Fabric Materials,14,719.399832,2014
-415,Q5,"Wollen Yarn,Fabrics,Madeupsetc",Na,China ,230,2.89634,Fabric Materials,14,666.1582,2014
-464,I8,Auto Tyres And Tubes,Nos,China ,2670796,23.300261,Rubber Products,5,62230243.88,2014
-483,I6,Plastic bags,Kgs,China ,80521,0.560669,Plastic Materials,8,45145.62855,2014
-486,G2,Footwear Of Leather,Na,China ,114,0.284181,Leather Products,1,32.396634,2014
-353,L5,"Aluminium, Products Of Aluminm",Ton,China ,12639,25.744676,Metals,2,325386.96,2015
-365,P8,"Cotton Fabrics, Madeups Etc.",Na,China ,18233,35.096897,Fabric Materials,14,639921.723,2015
-369,H8,"Drug Formulations, Biologicals",Kgs,China ,354867,23.233529,Chemicals,7,8244812.736,2015
-384,K5,"Human Hair, Products Thereo",Kgs,China ,2836576,175.190559,Cosmetics,6,496941335.1,2015
-386,I2,Inorganic Chemicals,Kgs,China ,37604936,40.209317,Chemicals,7,1512068792,2015
-389,L7,Lead And Products Made Of Led,Ton,China ,0,0.003814,Metals,2,0,2015
-395,O5,Motor Vehicle/Cars,Nos,China ,22,1.34571,Machinery and parts,10,29.60562,2015
-402,L2,Other Plastic Items,Na,China ,36251,6.695686,Plastic Products,8,242725.3132,2015
-403,I9,Othr Rubber Prodct Excpt Footw,Na,China ,21838,29.842908,Rubber Products,5,651709.4249,2015
-459,M5,Accumulators And Batteries,Na,China ,1004,0.128631,Accumulators and Batteries,10,129.145524,2015
-471,L6,Copper And Prdcts Made Of Copr,Ton,China ,840,5.526266,Metals,2,4642.06344,2015
-472,I5,Cosmetics And Toiletries,Na,China ,1836,24.422758,Cosmetics,6,44840.18369,2015
-373,M4,Electrodes,Kgs,China ,61688,0.888292,Accumulators and Batteries,9,54796.9569,2016
-378,H3,Fertilizers Manufactured,Ton,China ,0,0.006842,Fertilizers,3,0,2016
-379,F8,Finished Leather,Kgs,China ,6797700,109.346107,Leather Products,1,743302031.6,2016
-385,N5,Ic Engines And Parts,Na,China ,250,155.81895,Machinery and parts,10,38954.7375,2016
-394,Q3,"Manmade Yarn,Fabrics,Madeups",Na,China ,5291,36.581582,Fabric Materials,14,193553.1504,2016
-406,K9,"Plastc Sht, Film, Plts Etc",Kgs,China ,11141735,30.31734,Plastic Products,8,337787768.2,2016
-474,P7,Cotton Yarn,Ton,China ,45849,133.060186,Fabric Materials,14,6100676.468,2016
-476,H8,"Drug Formulations, Biologicals",Kgs,China ,318334,28.333474,Chemicals,7,9019508.112,2016
-377,H2,Fertilizers Crude,Ton,China ,72,0.362269,Fertilizers,3,26.083368,2017
-405,S6,Petroleum Products,Ton,China ,1919643,789.427763,Petroleum Products,13,1515419479,2017
-409,O3,Pumps Of All Types,Na,China ,4415,19.233528,Machinery and parts,10,84916.02612,2017
-419,M5,Accumulators And Batteries,Na,China ,249,0.052256,Accumulators and Batteries,10,13.011744,2017
-468,S2,Carpet(Excl. Silk) Handmade,Sqm,China ,11170,0.666333,Handicrafts,12,7442.93961,2017
-473,P8,"Cotton Fabrics, Madeups Etc.",Na,China ,2266,19.626811,Fabric Materials,14,44474.35373,2017
-370,H6,Dye Intermediates,Kgs,China ,20702859,47.623487,Dyes,7,985942336.4,2018
-375,P3,Washing Machine,Na,China ,5414,232.682953,Electronic Components,11,1259745.508,2018
-390,G3,Leather Footwear Component,Kgs,China ,13386,0.204594,Leather Products,1,2738.695284,2018
-461,L5,"Aluminium, Products Of Aluminm",Ton,China ,1054,4.299152,Metals,2,4531.306208,2018
-462,N7,"Atm, Injctng Mlding Mchnry Etc",Na,China ,1054,8.344105,Machinery and Parts,10,8794.68667,2018
-463,M3,Auto Components/Parts,Na,China ,1054,82.044941,Machinery and Parts,10,86475.36781,2018
-482,P3,Washing Machine,Na,China ,11946,11.856368,Electronic Components,11,141636.1721,2018
-351,H9,Agro Chemicals,Kgs,China ,11150829,61.373844,Fertilizers,3,684369239.5,2019
-359,H5,"Bulk Drugs, Drug Intermediates",Kgs,China ,4533292,104.30215,Chemicals,7,472832102.2,2019
-366,S4,Cotton Raw Incld. Waste,Ton,China ,179149,283.165918,Fabric Materials,14,50728891.04,2019
-371,H7,Dyes,Kgs,China ,14848704,87.006065,Dyes,7,1291927305,2019
-376,I6,Plastic bags,Kgs,China ,135380,1.708527,Plastic Materials,8,231300.3853,2019
-380,R8,Floor Cvrng Of Jute,Sqm,China ,152459,1.170805,Handicrafts,12,178499.7595,2019
-393,P6,Manmade Staple Fibre,Kgs,China ,30987555,56.353087,Fabric Materials,14,1746244383,2019
-407,K8,Plastic Raw Materials,Ton,China ,210441,246.492427,Plastic Products,8,51872112.83,2019
-410,O6,"Railwy Trnsprt Equipmnts, Prts",Na,China ,1280,0.944721,Machinery and parts,10,1209.24288,2019
-417,M1,Zinc And Products Made Of Zinc,Ton,China ,16151,46.928258,Metals,2,757938.295,2019
-460,H9,Agro Chemicals,Kgs,China ,4706468,18.792874,Fertilizers,3,88448060.11,2019
-480,M4,Electrodes,Kgs,China ,53806,0.140426,Accumulators and Batteries,9,7555.761356,2019
-484,H2,Fertilizers Crude,Ton,China ,1,0.004229,Fertilizers,3,0.004229,2019
-487,J1,Footwear Of Rubber/Canvas Etc.,Na,China ,114,1.182721,Rubber Products,5,134.830194,2019
-383,G9,Gold And Oth Precs Metl Jwlery,Na,China ,566,1.365364,Metals,2,772.796024,2020
-391,G1,Leather Garments,Kgs,China ,249276,15.567777,Leather Products,1,3880673.179,2020
-401,I4,Other Miscellaenious Chemicals,Kgs,China ,5423291,14.673135,Chemicals,7,79576680.99,2020
-411,Q7,Rmg Silk,Na,China ,3559,0.266385,Fabric Materials,14,948.064215,2020
-414,R4,Silk Waste,Kgs,China ,1522520,12.462585,Fabric Materials,14,18974534.91,2020
-416,Q4,"Wool, Raw",Kgs,China ,19352,0.035488,Fabric Materials,14,686.763776,2020
-418,N1,"Aircraft, Spacecraft And Parts",Na,China ,2798,20.10352,Machinery and Parts,10,56249.64896,2020
-465,H4,Ayush And Herbal Products,Kgs,China ,919844,1.163212,Cosmetics,6,1069973.579,2020
-470,P1,Consumer Electronics,Na,China ,4236,5.307186,Electronic Components,11,22481.2399,2020
-479,N4,Air conditioner,Na,China ,666,20.753784,Electronic Components,11,13822.02014,2020
-481,P2,Microwave ,Na,China ,7272,9.718599,Electronic Components,11,70673.65193,2020
 430,O9,"Computer Hardware, Peripherals",Na,Denmark,49084,0.106268,Machinery and Parts,10,5216.058512,2012
 434,I2,Inorganic Chemicals,Kgs,Denmark,1757365,1.74356,Chemicals,7,3064071.319,2012
 441,O5,Motor Vehicle/Cars,Nos,Denmark,4341,33.174435,Machinery and parts,10,144010.2223,2012
@@ -463,9 +373,9 @@
 436,G3,Leather Footwear Component,Kgs,Denmark,147,0.008626,Leather Products,1,1.268022,2020
 439,P6,Manmade Staple Fibre,Kgs,Denmark,516942,0.539634,Fabric Materials,14,278959.4792,2020
 442,Q2,"Natrl Silk Yarn,Fabrics,Madeup",Na,Denmark,4341,0.072981,Fabric Materials,14,316.810521,2020
-445,I4,Other Miscellaenious Chemicals,Kgs,Denmark,43111,0.512669,Chemicals,7,22101.67326,2020
-454,O3,Pumps Of All Types,Na,Denmark,1445,1.573173,Machinery and parts,10,2273.234985,2020
-517,M1,Zinc And Products Made Of Zinc,Ton,Egypt,612,1.80877,Metals,2,1106.96724,2015
+445,I4,Other Miscellaenious Chemicals,Kgs,Denmark,43111,0.512669,Chemicals,7,2210111.67326,2020
+454,O3,Pumps Of All Types,Na,Denmark,1445,1.573173,Machinery and parts,10,227334.234985,2020
+517,M1,Zinc And Products Made Of Zinc,Ton,Egypt,612,1.80877,Metals,2,111000106.96724,2015
 523,N7,"Atm, Injctng Mlding Mchnry Etc",Na,France,4722,28.628207,Machinery and Parts,10,135182.3935,2012
 534,P8,"Cotton Fabrics, Madeups Etc.",Na,France,13602,87.452143,Fabric Materials,14,1189524.049,2012
 537,N3,"Cranes, Lifts And Winches",Na,France,490,12.330949,Machinery and parts,10,6042.16501,2012
@@ -2115,65 +2025,4 @@
 2151,I2,Inorganic Chemicals,Kgs,U S A,367853,0.226112,Chemicals,7,83175.97754,2020
 2160,I9,Othr Rubber Prodct Excpt Footw,Na,U S A,43908,1.060787,Rubber Products,5,46577.0356,2020
 2163,K8,Plastic Raw Materials,Ton,U S A,183,0.279171,Plastic Products,8,51.088293,2020
-495,G3,Leather Footwear Component,Kgs,USA,1000,0.017656,Leather Products,1,17.656,2012
-502,E5,Natural Rubber,Ton,USA,1038,1.315475,Rubber Products,5,1365.46305,2012
-516,Q5,"Wollen Yarn,Fabrics,Madeupsetc",Na,USA,873,3.112777,Fabric Materials,14,2717.454321,2012
-2172,L6,Copper And Prdcts Made Of Copr,Ton,USA,143,1.326908,Metals,2,189.747844,2012
-2182,K5,"Human Hair, Products Thereo",Kgs,USA,161,0.004233,Cosmetics,6,0.681513,2012
-496,G1,Leather Garments,Kgs,USA,60,0.005128,Leather Products,1,0.30768,2013
-499,Q3,"Manmade Yarn,Fabrics,Madeups",Na,USA,2850,112.22951,Fabric Materials,14,319854.1035,2013
-512,O3,Pumps Of All Types,Na,USA,1839,8.572149,Machinery and parts,10,15764.18201,2013
-2171,S2,Carpet(Excl. Silk) Handmade,Sqm,USA,343680,5.087038,Handicrafts,12,1748313.22,2013
-2180,F8,Finished Leather,Kgs,USA,46620,0.763783,Leather Products,1,35607.56346,2013
-2195,S6,Petroleum Products,Ton,USA,627,0.597472,Petroleum Products,13,374.614944,2013
-497,F9,Leather Goods,Na,USA,670127,0.115968,Leather Products,1,77713.28794,2014
-511,L4,Products Of Iron And Steel,Na,USA,575,52.326255,Metals,2,30087.59663,2014
-2174,H8,"Drug Formulations, Biologicals",Kgs,USA,820174,37.55661,Chemicals,7,30802955.05,2014
-2175,H6,Dye Intermediates,Kgs,USA,746597,2.52226,Dyes,7,1883111.749,2014
-2179,H2,Fertilizers Crude,Ton,USA,0,0.000515,Fertilizers,3,0,2014
-2181,R8,Floor Cvrng Of Jute,Sqm,USA,13199,0.087518,Handicrafts,12,1155.150082,2014
-2191,I3,Organic Chemicals,Kgs,USA,20512943,82.450828,Chemicals,7,1691309135,2014
-2192,M2,Oth Non Ferous Metal And Prodc,Kgs,USA,947652,3.603544,Metals,2,3414905.679,2014
-2198,G7,Silver,Kgs,USA,885,0.482879,Metals,2,427.347915,2014
-2199,M1,Zinc And Products Made Of Zinc,Ton,USA,159,0.474537,Metals,2,75.451383,2014
-493,R6,Jute Yarn,Ton,USA,429,0.535332,Fabric Materials,14,229.657428,2015
-503,I3,Organic Chemicals,Kgs,USA,25079096,46.025075,Chemicals,7,1154267274,2015
-510,K8,Plastic Raw Materials,Ton,USA,125204,116.669515,Plastic Products,8,14607489.96,2015
-2169,H4,Ayush And Herbal Products,Kgs,USA,1935116,6.050245,Cosmetics,6,11707925.9,2015
-2176,H7,Dyes,Kgs,USA,7878104,41.65087,Dyes,7,328129885.6,2015
-2188,O5,Motor Vehicle/Cars,Nos,USA,212374,1578.028368,Machinery and parts,10,335132196.6,2015
-489,K5,"Human Hair, Products Thereo",Kgs,USA,20,0.000473,Cosmetics,6,0.00946,2016
-490,N5,Ic Engines And Parts,Na,USA,148,29.305278,Machinery and parts,10,4337.181144,2016
-500,O5,Motor Vehicle/Cars,Nos,USA,62962,98.867848,Machinery and parts,10,6224917.446,2016
-507,I9,Othr Rubber Prodct Excpt Footw,Na,USA,35928,7.39647,Rubber Products,5,265740.3742,2016
-2173,P7,Cotton Yarn,Ton,USA,1121,3.510206,Fabric Materials,14,3934.940926,2016
-494,L7,Lead And Products Made Of Led,Ton,USA,50,0.123767,Metals,2,6.18835,2017
-501,Q2,"Natrl Silk Yarn,Fabrics,Madeup",Na,USA,5666,0.00026,Fabric Materials,14,1.47316,2017
-506,L2,Other Plastic Items,Na,USA,30397,2.468101,Plastic Products,8,75022.8661,2017
-514,Q7,Rmg Silk,Na,USA,2697,0.022898,Fabric Materials,14,61.755906,2017
-2167,L5,"Aluminium, Products Of Aluminm",Ton,USA,89526,164.541145,Metals,2,14730710.55,2017
-2186,G1,Leather Garments,Kgs,USA,2264,0.17973,Leather Products,1,406.90872,2017
-2190,L8,"Nickel, Product Made Of Nickel",Ton,USA,43,0.666078,Metals,2,28.641354,2017
-2193,I4,Other Miscellaenious Chemicals,Kgs,USA,633031,10.528325,Chemicals,7,6664756.103,2017
-2197,K8,Plastic Raw Materials,Ton,USA,19851,19.913943,Plastic Products,8,395311.6825,2017
-498,P6,Manmade Staple Fibre,Kgs,USA,12155666,12.611458,Fabric Materials,14,153300671.2,2018
-505,I4,Other Miscellaenious Chemicals,Kgs,USA,562169,8.420772,Chemicals,7,4733896.974,2018
-508,S6,Petroleum Products,Ton,USA,240597,119.14519,Petroleum Products,13,28665975.28,2018
-515,Q9,Rmg Wool,Na,USA,540,0.558431,Fabric Materials,14,301.55274,2018
-2178,I6,Plastic bags,Kgs,USA,21407,0.413681,Plastic Materials,8,8855.669167,2018
-2183,I2,Inorganic Chemicals,Kgs,USA,2754466,5.215761,Chemicals,7,14366636.34,2018
-2189,E5,Natural Rubber,Ton,USA,16,0.027007,Rubber Products,5,0.432112,2018
-2194,K7,Packaging Materials,Ton,USA,1396,3.70259,Plastic Products,8,5168.81564,2018
-2196,K9,"Plastc Sht, Film, Plts Etc",Kgs,USA,16329392,28.479017,Plastic Products,8,465045032.4,2018
-488,G9,Gold And Oth Precs Metl Jwlery,Na,USA,4557,0.948548,Metals,2,4322.533236,2019
-491,I2,Inorganic Chemicals,Kgs,USA,50457030,5.349624,Chemicals,7,269926138.7,2019
-492,L3,Iron And Steel,Ton,USA,31527,31.383097,Metals,2,989414.8991,2019
-504,M2,Oth Non Ferous Metal And Prodc,Kgs,USA,982231,3.000061,Metals,2,2946752.916,2019
-509,K9,"Plastc Sht, Film, Plts Etc",Kgs,USA,4513512,11.757117,Plastic Products,8,53065888.66,2019
-2170,H5,"Bulk Drugs, Drug Intermediates",Kgs,USA,4330984,111.740042,Chemicals,7,483944334.1,2019
-2177,M4,Electrodes,Kgs,USA,80074,0.456853,Accumulators and Batteries,9,36582.04712,2019
-2184,L3,Iron And Steel,Ton,USA,216648,147.506357,Metals,2,31956957.23,2019
-2185,G3,Leather Footwear Component,Kgs,USA,5,0.000153,Leather Products,1,0.000765,2019
-2187,P6,Manmade Staple Fibre,Kgs,USA,5838713,7.388117,Fabric Materials,14,43137094.77,2019
-513,O6,"Railwy Trnsprt Equipmnts, Prts",Na,USA,4265,0.02949,Machinery and parts,10,125.77485,2020
-2168,I8,Auto Tyres And Tubes,Nos,USA,296057,19.13832,Rubber Products,5,5666033.604,2020
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!--libraries for bootstrap-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<title>Dashboard</title>
+
+<style>
+
+.bar.total rect {
+  fill: steelblue;
+}
+
+.bar.positive rect {
+  fill: darkolivegreen;
+}
+.bar.negative rect {
+  fill: crimson;
+}
+
+.bar line.connector {
+  stroke: grey;
+  stroke-dasharray: 3;
+}
+
+.bar text {
+  fill: white;
+  font: 12px sans-serif;
+  text-anchor: middle;
+  color:black;
+}
+
+.axis text {
+  font: 10px sans-serif;
+  
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<br>
+<h2>Waterfall Chart showing increase or decrease of Trade in respective Years</h2><br>
+<svg class="chart"></svg>
+<br>
+<a href="./admin.html" class="btn btn-primary" style="margin-left: 120px; margin.top:350px;" role="button">Home</a>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+var margin = {top: 20, right: 30, bottom: 50, left: 150},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom,
+    padding = 0.3;
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], padding);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+
+var chart = d3.select(".chart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("data.csv", type, function(error, data) {
+
+
+y.domain([0, d3.max(data, function(d) { return d.value_i; })]);
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(function(d) { return dollarFormatter(d); });
+
+
+  // Transform data (i.e., finding cumulative values and total) for easier charting
+  var cumulative = 0;
+  for (var i = 0; i < 9; i++) {
+    data[i].start = cumulative;
+    cumulative += data[i].value_i;
+    data[i].end = cumulative;
+
+    data[i].class = ( data[i].value_i >= 0 ) ? 'positive' : 'negative'
+  }
+  data.push({
+    year: 'Total',
+    end: cumulative,
+    start: 0,
+    class: 'total'
+  });
+
+  x.domain(data.map(function(d) { return d.year; }));
+  y.domain([0, d3.max(data, function(d) { return d.end; })]);
+
+  chart.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  chart.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+
+  var bar = chart.selectAll(".bar")
+      .data(data)
+    .enter().append("g")
+      .attr("class", function(d) { return "bar " + d.class })
+      .attr("transform", function(d) { return "translate(" + x(d.year) + ",0)"; });
+
+  bar.append("rect")
+      .attr("y", function(d) { return y( Math.max(d.start, d.end) ); })
+      .attr("height", function(d) { return Math.abs( y(d.start) - y(d.end) ); })
+      .attr("width", x.rangeBand());
+
+  bar.append("text")
+      .attr("x", x.rangeBand() / 2)
+      .attr("y", function(d) { return y(d.end) + 5; })
+      .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + ".75em" })
+      .text(function(d) { return dollarFormatter(d.end - d.start);});
+
+  bar.filter(function(d) { return d.class != "total" }).append("line")
+      .attr("class", "connector")
+      .attr("x1", x.rangeBand() + 5 )
+      .attr("y1", function(d) { return y(d.end) } )
+      .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
+      .attr("y2", function(d) { return y(d.end) } )
+
+      chart.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height + margin.top + 10)
+    .text("Year")
+
+// Y axis label:
+chart.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -margin.left+25)
+    .attr("x", -margin.top)
+    .text("Value");
+
+  /*chart.append("text")
+            .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+            .attr("transform", "translate("+ (padding/2) +","+(height/2)+")rotate(-90)")  // text is drawn off the screen top left, move down and out and rotate
+            .text("Value");
+
+        vis.append("text")
+            .attr("text-anchor", "middle")  // this makes it easy to centre the text as the transform is applied to the anchor
+            .attr("transform", "translate("+ (width/2) +","+(height-(padding/3))+")")  // centre below axis
+            .text("Year");*/
+});
+
+function type(d) {
+  d.value_i = +d.value_i;
+  return d;
+}
+
+function dollarFormatter(n) {
+  n = Math.round(n);
+  var result = n;
+  if (Math.abs(n) > 1000) {
+    result = Math.round(n/1000) + 'K';
+  }
+  return '$' + result;
+}
+
+</script>
