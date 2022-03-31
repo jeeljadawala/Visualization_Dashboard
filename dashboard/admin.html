@@ -821,12 +821,11 @@ var margin = { top: 10, right: 120, bottom: 30, left: 50 },
 
 
 
-    
-//stack area
+ //stack area
 // set the dimensions and margins of the graph
 
 var path="export.csv";
-var margin = {top: 10, right: 40, bottom: 30, left: 80},
+var margin = {top: 10, right: 40, bottom: 60, left: 80},
     width = 580 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
    
@@ -837,7 +836,10 @@ var chart4 = d3.select("#stackArea")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+          "translate(" + margin.left + "," + margin.top + ")")
+          
+          
+          ;
 
 //Read the data
 d3.csv(path, function(data) {
@@ -855,6 +857,7 @@ d3.csv(path, function(data) {
     .value(function(d, key){
       return d.values[key].quantity
     })
+    
     (sumstat)
 
   // Add X axis --> it is a date format
@@ -879,16 +882,33 @@ d3.csv(path, function(data) {
 
   // Show the areas
   chart4
-    .selectAll("mylayers")
+    .selectAll(".hover")
+    .append("text")
+      
+               .text(d => `${d.quantity}`)
+               
+    
     .data(stackedData)
     .enter()
     .append("path")
-      .style("fill", function(d) { name = mygroups[d.key-1] ;  return color(name); })
+    .on("mouseover", showTooltip)
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", hideTooltip)
+
+    .style("fill", function(d) { name = mygroups[d.key-1] ;  return color(name); })
+    
+      
+    
       .attr("d", d3.area()
         .x(function(d, i) { return x(d.data.key); })
         .y0(function(d) { return y(d[0]); })
         .y1(function(d) { return y(d[1]); })
+        
+        
+        
+
     )
+    
     var tooltip2 = d3.select("#stackArea")
     .append("div")
       .style("opacity", 0)
@@ -905,7 +925,7 @@ d3.csv(path, function(data) {
       .duration(200)
     tooltip2
       .style("opacity", 1)
-      .html("countryName: " + d.quantity)
+      .html("Quantity: " + d.year)
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]+20) + "px")
   }
@@ -929,19 +949,43 @@ chart4.append("text")
     .text("Year");
 
 // Y axis label:
-chart4.append("text")
+ chart4.append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
     .attr("y", -margin.left - 25)
     .attr("x", -margin.top)
     .text("Quantity")
-    .on("mouseover", showTooltip )
-    .on("mousemove", moveTooltip )
-    .on("mouseleave", hideTooltip )
+    chart4.append("circle").attr("cx",370).attr("cy",105).attr("r", 6).style("fill", "#e41a1c")
+    chart4.append("circle").attr("cx",370).attr("cy",120).attr("r", 6).style("fill", "#4daf4a")
+   chart4.append("circle").attr("cx",370).attr("cy",135).attr("r", 6).style("fill", "#984ea3")
+    chart4.append("circle").attr("cx",370).attr("cy",150).attr("r", 6).style("fill", "#ff7f00")
+    chart4.append("circle").attr("cx",370).attr("cy",165).attr("r", 6).style("fill", "#ffff33")
+    chart4.append("circle").attr("cx",370).attr("cy",180).attr("r", 6).style("fill", "#a65628")
+    chart4.append("circle").attr("cx",370).attr("cy",195).attr("r", 6).style("fill", "#f781bf")
+    chart4.append("circle").attr("cx",370).attr("cy",210).attr("r", 6).style("fill", "#69b3a2")
+    chart4.append("circle").attr("cx",370).attr("cy",225).attr("r", 6).style("fill", "#999999")
+
+
+    chart4.append("text").attr("x", 390).attr("y", 105).text("Chemicals").style("font-size", "15px").attr("alignment-baseline","middle")
+    chart4.append("text").attr("x", 390).attr("y", 120).text("Fertilizers").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y", 135).text("Dyes").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y", 150).text("Handicrafts").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y", 165).text("Fabric Materials").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y", 180).text("Plastic Products").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y", 195).text("Rubber Products").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y", 210).text("Metals").style("font-size", "15px").attr("alignment-baseline","middle")
+
+    chart4.append("text").attr("x", 390).attr("y",225).text("Cosmetics").style("font-size", "15px").attr("alignment-baseline","middle")
 
 
 
-
+   
 })
 
 //horizontalbar
